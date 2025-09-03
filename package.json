@@ -1,0 +1,147 @@
+{
+  "name": "landing-memory-bank",
+  "version": "3.0.0",
+  "description": "Мощная система управления знаниями для веб-разработки и создания landing страниц",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "CORE",
+    "DEVELOPMENT_PIPELINE",
+    "ERROR_DATABASE",
+    "RULES_ENGINE",
+    "LANDING",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "init": "node scripts/init.js",
+    "dev": "node scripts/dev.js",
+    "build": "rollup -c",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "format": "prettier --write src/**/*.js",
+    "clean": "rimraf dist",
+    "reset-database": "node scripts/reset-database.js",
+    "validate-config": "node scripts/validate-config.js",
+    "start": "node scripts/start.js",
+    "setup": "npm run clean && npm install && npm run build && npm run init"
+  },
+  "keywords": [
+    "landing-page",
+    "web-development",
+    "memory-bank",
+    "knowledge-management",
+    "ai-assistant",
+    "cursor-ai",
+    "web-design",
+    "ux-ui",
+    "css-architecture",
+    "javascript-patterns",
+    "html-semantics",
+    "performance-optimization",
+    "accessibility",
+    "responsive-design",
+    "conversion-optimization"
+  ],
+  "author": {
+    "name": "Landing Memory Bank Team",
+    "email": "team@landingmemorybank.com",
+    "url": "https://github.com/mrdudekowski/landing_memory_bank"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrdudekowski/landing_memory_bank.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrdudekowski/landing_memory_bank/issues"
+  },
+  "homepage": "https://github.com/mrdudekowski/landing_memory_bank#readme",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "compression": "^1.7.4",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "uuid": "^9.0.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "inquirer": "^8.2.6",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.1.1",
+    "glob": "^10.3.10",
+    "chokidar": "^3.5.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^3.29.4",
+    "rollup-plugin-dts": "^6.1.0",
+    "typescript": "^5.2.2",
+    "jest": "^29.7.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "nodemon": "^3.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "vue": ">=3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2
+  }
+}
